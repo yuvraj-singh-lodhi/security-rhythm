@@ -81,30 +81,30 @@ export default function NervousSystemScene() {
       <section ref={sceneRef} className="w-full h-screen relative bg-[#05080D] text-[#F2F5F7] overflow-hidden flex items-center justify-center">
         
         {/* Core Layer */}
-        <div className="scene-core-wrapper absolute w-[70vh] h-[70vh]">
+        <div className="scene-core-wrapper absolute w-[70vw] h-[70vw] sm:w-[60vw] sm:h-[60vw] md:w-[60vh] md:h-[60vh]">
           <SecurithumCore state="SENSING" />
         </div>
 
         {/* Floating Typography */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <h2 className="text-senses absolute text-5xl md:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#22D3EE]">
+          <h2 className="text-senses absolute text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#22D3EE] px-4">
             IT SENSES.
           </h2>
-          <h2 className="text-connects absolute text-5xl md:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#34D399]">
+          <h2 className="text-connects absolute text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#34D399] px-4">
             IT CONNECTS.
           </h2>
-          <h2 className="text-understands absolute text-5xl md:text-7xl font-bold opacity-0 translate-y-8 text-center max-w-4xl text-[#F5A623]">
+          <h2 className="text-understands absolute text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold opacity-0 translate-y-8 text-center max-w-4xl text-[#F5A623] px-4">
             IT UNDERSTANDS<br/>CONSEQUENCES.
           </h2>
-          <h2 className="text-signals absolute text-5xl md:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#FF4D4D]">
+          <h2 className="text-signals absolute text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold opacity-0 translate-y-8 text-center text-[#FF4D4D] px-4">
             IT SIGNALS.
           </h2>
           
-          <div className="text-rhythm absolute flex flex-col items-center opacity-0 translate-y-8">
-            <h2 className="text-5xl md:text-8xl font-bold text-center mb-8">
+          <div className="text-rhythm absolute flex flex-col items-center opacity-0 translate-y-8 px-4">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-center mb-6 sm:mb-8">
               SECURITY<br/><span className="text-[#00B8D4]">IN RHYTHM.</span>
             </h2>
-            <div className="rhythm-copy opacity-0 translate-y-4 max-w-md text-center text-[#8997A8] space-y-4">
+            <div className="rhythm-copy opacity-0 translate-y-4 max-w-md text-center text-[#8997A8] space-y-4 text-sm sm:text-base">
               <p>Securithum is your organisation&apos;s compliance nervous system.</p>
               <p>It senses change. Connects consequences. And keeps your security programme moving.</p>
             </div>
@@ -137,7 +137,7 @@ export default function NervousSystemScene() {
         </div>
 
         {/* Stage 03: Consequences Stats */}
-        <div className="absolute right-12 top-1/3 flex flex-col gap-6 font-mono text-sm z-30">
+        <div className="absolute right-4 sm:right-12 top-1/3 flex flex-col gap-3 sm:gap-6 font-mono text-xs sm:text-sm z-30">
           <div className="consequence-stat text-[#FF4D4D]">3 RISKS AFFECTED</div>
           <div className="consequence-stat text-[#F5A623]">7 CONTROLS REVIEW REQUIRED</div>
           <div className="consequence-stat text-[#34D399]">4 FRAMEWORK REQUIREMENTS IMPACTED</div>

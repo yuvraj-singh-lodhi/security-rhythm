@@ -83,16 +83,16 @@ export default function DisconnectedOrganisation() {
     
       <div className="gsap-pin-wrapper">
       <section ref={sceneRef} className="w-full h-screen relative bg-[#05080D] text-[#F2F5F7] overflow-hidden">
-        
+
         {/* Layer 01: Deep technical grid */}
         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(#09111C 1px, transparent 1px), linear-gradient(90deg, #09111C 1px, transparent 1px)", backgroundSize: "50px 50px" }} />
 
         {/* Layer 03-05: Floating entities */}
         <div className="absolute inset-0 z-10">
           {floaters.map((f, i) => (
-            <div 
+            <div
               key={i}
-              className={`floating-node floater-${i} absolute flex flex-col items-center gap-2 p-3 bg-[#0E1825]/80 border border-[#8997A8]/20 rounded-lg backdrop-blur-sm`}
+              className={`floating-node floater-${i} absolute hidden sm:flex flex-col items-center gap-2 p-2 sm:p-3 bg-[#0E1825]/80 border border-[#8997A8]/20 rounded-lg backdrop-blur-sm`}
               style={{ top: f.top, left: f.left }}
             >
               <span className="font-mono text-xs text-[#22D3EE]">{f.id}</span>
@@ -104,17 +104,17 @@ export default function DisconnectedOrganisation() {
         {/* Layer 06: Typography */}
         <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
           
-          <h2 className="text-fragmented absolute text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter text-center opacity-0 translate-y-12">
+          <h2 className="text-fragmented absolute text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter text-center opacity-0 translate-y-12 px-4">
             COMPLIANCE<br/>IS FRAGMENTED.
           </h2>
 
-          <div className="absolute w-full h-full max-w-6xl mx-auto flex flex-col justify-center px-12">
-            <h3 className="text-scatter-1 text-3xl md:text-5xl font-bold opacity-0 -translate-x-12 self-start text-[#F5A623]">RISK OVER HERE.</h3>
-            <h3 className="text-scatter-2 text-3xl md:text-5xl font-bold opacity-0 translate-x-12 self-end mt-12 text-[#34D399]">PRIVACY OVER THERE.</h3>
-            <h3 className="text-scatter-3 text-3xl md:text-5xl font-bold opacity-0 -translate-x-12 self-center mt-12 text-[#22D3EE]">AUDIT SOMEWHERE ELSE.</h3>
+          <div className="absolute w-full h-full max-w-5xl mx-auto flex flex-col justify-center px-6 sm:px-12">
+            <h3 className="text-scatter-1 text-2xl sm:text-3xl md:text-5xl font-bold opacity-0 -translate-x-12 self-start text-[#F5A623]">RISK OVER HERE.</h3>
+            <h3 className="text-scatter-2 text-2xl sm:text-3xl md:text-5xl font-bold opacity-0 translate-x-12 self-end mt-6 sm:mt-12 text-[#34D399]">PRIVACY OVER THERE.</h3>
+            <h3 className="text-scatter-3 text-2xl sm:text-3xl md:text-5xl font-bold opacity-0 -translate-x-12 self-center mt-6 sm:mt-12 text-[#22D3EE]">AUDIT SOMEWHERE ELSE.</h3>
           </div>
 
-          <h2 className="text-record absolute text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-center max-w-4xl opacity-0 scale-95">
+          <h2 className="text-record absolute text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold tracking-tighter text-center max-w-4xl opacity-0 scale-95 px-4">
             EVERY SYSTEM CALLS ITSELF A SYSTEM OF RECORD.
           </h2>
 
@@ -122,7 +122,7 @@ export default function DisconnectedOrganisation() {
             RECORDS SIT STILL.
           </h3>
 
-          <h1 className="text-doesnt absolute text-[12vw] font-bold tracking-tighter text-center opacity-0 scale-110 text-[#FF4D4D]">
+          <h1 className="text-doesnt absolute text-[14vw] sm:text-[12vw] font-bold tracking-tighter text-center opacity-0 scale-110 text-[#FF4D4D] px-4">
             YOUR RISK<br/>DOESN&apos;T.
           </h1>
 
@@ -130,7 +130,7 @@ export default function DisconnectedOrganisation() {
 
         {/* Layer 07: The Core entering */}
         <div className="scene-core absolute z-0 inset-0 flex items-center justify-center opacity-0 scale-50 translate-y-32">
-          <div className="w-[80vh] h-[80vh]">
+          <div className="w-[70vw] h-[70vw] sm:w-[60vw] sm:h-[60vw] md:w-[70vh] md:h-[70vh]">
             <SecurithumCore state="FRAGMENTED" />
           </div>
         </div>

@@ -63,23 +63,22 @@ export default function PricingScene() {
         </div>
 
         {/* Pricing Core */}
-        <div className="core-pricing absolute w-[50vh] h-[50vh] opacity-0 scale-50 z-10 [transform-style:preserve-3d]">
-          {/* We use the same Core, but in reality we'd toggle states. For now we use the main Core and rely on CSS transitions if implemented. */}
+        <div className="core-pricing absolute w-[45vw] h-[45vw] sm:w-[40vw] sm:h-[40vw] md:w-[45vh] md:h-[45vh] opacity-0 scale-50 z-10 [transform-style:preserve-3d]">
           <SecurithumCore state="STABLE" />
         </div>
 
         {/* Plan Details Overlay */}
         <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
           {pricingPlans.map((plan, i) => (
-            <div key={i} className={`plan-${i} absolute flex flex-col items-center bg-[#05080D]/80 backdrop-blur-md border border-[#8997A8]/30 rounded-2xl p-8 md:p-12 opacity-0 -translate-x-12 min-w-[300px] md:min-w-[400px]`}>
+            <div key={i} className={`plan-${i} absolute flex flex-col items-center bg-[#05080D]/80 backdrop-blur-md border border-[#8997A8]/30 rounded-2xl p-6 sm:p-8 md:p-12 opacity-0 -translate-x-12 w-[min(90vw,400px)]`}>
               {plan.popular && <div className="absolute -top-4 bg-[#22D3EE] text-[#05080D] px-4 py-1 font-mono text-xs font-bold rounded-full">MOST POPULAR</div>}
               
-              <h3 className="font-mono text-xl tracking-widest text-[#8997A8] mb-8">{plan.name.toUpperCase()}</h3>
-              
-              <div className="flex flex-col items-center gap-2 mb-8">
-                <div className="text-6xl md:text-8xl font-bold tracking-tighter">£ {plan.gbp}</div>
-                <div className="text-2xl text-[#8997A8] font-mono">₹ {plan.inr.toLocaleString()}</div>
-                <div className="text-xs tracking-widest text-[#8997A8] uppercase">PER {plan.period}</div>
+              <h3 className="font-mono text-sm sm:text-xl tracking-widest text-[#8997A8] mb-6 sm:mb-8">{plan.name.toUpperCase()}</h3>
+
+              <div className="flex flex-col items-center gap-1 sm:gap-2 mb-6 sm:mb-8">
+                <div className="text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter">£ {plan.gbp}</div>
+                <div className="text-lg sm:text-2xl text-[#8997A8] font-mono">₹ {plan.inr.toLocaleString()}</div>
+                <div className="text-[10px] sm:text-xs tracking-widest text-[#8997A8] uppercase">PER {plan.period}</div>
               </div>
 
               <ul className="w-full space-y-4 font-mono text-sm">

@@ -119,7 +119,9 @@ export default function SignalAcquisition({ onComplete }: { onComplete: () => vo
 
       {/* Core Formation */}
       <div className="core-wrapper absolute inset-0 flex items-center justify-center opacity-0 scale-50 pointer-events-none">
-        <SecurithumCore state="FRAGMENTED" />
+        <div className="w-[70vmin] h-[70vmin]">
+          <SecurithumCore state="FRAGMENTED" />
+        </div>
       </div>
     </div>
   );

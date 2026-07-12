@@ -66,7 +66,7 @@ export default function TechnicalSecurityScene() {
         
         {/* Architecture Visualization */}
         <div className="arch-wrapper absolute inset-0 flex items-center justify-center z-0">
-          <div className="relative w-full max-w-4xl h-[400px]">
+          <div className="relative w-full max-w-4xl h-[280px] sm:h-[340px] md:h-[400px] px-4">
             {/* Lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
               <line x1="20%" y1="50%" x2="40%" y2="50%" stroke="#8997A8" strokeWidth="2" strokeDasharray="4 4" className="arch-line" />
@@ -115,19 +115,19 @@ export default function TechnicalSecurityScene() {
         </div>
 
         {/* Vectors */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 pointer-events-none z-20">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 sm:gap-6 pointer-events-none z-20 px-4">
           {["APPLICATION LOGIC", "ACCESS CONTROL", "ATTACK CHAIN", "PRIVILEGE PATH", "BUSINESS IMPACT"].map((vec, i) => (
-            <div key={i} className="tech-vector opacity-0 font-mono text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-[#22D3EE] border-b border-[#22D3EE]/30 pb-2">
+            <div key={i} className="tech-vector opacity-0 font-mono text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-widest text-[#22D3EE] border-b border-[#22D3EE]/30 pb-1 sm:pb-2">
               {vec}
             </div>
           ))}
         </div>
 
         {/* Final Statement */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 pointer-events-none z-30">
-          <h1 className="text-find text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none">FIND IT.</h1>
-          <h1 className="text-prove text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none text-[#FF4D4D]">PROVE IT.</h1>
-          <h1 className="text-fix text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none text-[#34D399]">FIX IT.</h1>
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 sm:gap-4 pointer-events-none z-30 px-4">
+          <h1 className="text-find text-6xl sm:text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none">FIND IT.</h1>
+          <h1 className="text-prove text-6xl sm:text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none text-[#FF4D4D]">PROVE IT.</h1>
+          <h1 className="text-fix text-6xl sm:text-7xl md:text-[10vw] font-bold tracking-tighter opacity-0 leading-none text-[#34D399]">FIX IT.</h1>
         </div>
 
       </section>

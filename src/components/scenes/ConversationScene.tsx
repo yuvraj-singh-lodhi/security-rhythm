@@ -76,21 +76,21 @@ export default function ConversationScene() {
       <section ref={sceneRef} className="w-full h-screen relative bg-[#05080D] text-[#F2F5F7] overflow-hidden flex items-center justify-center">
         
         {/* The Core Background */}
-        <div className="scene-core absolute w-[80vh] h-[80vh] z-0">
+        <div className="scene-core absolute w-[70vw] h-[70vw] sm:w-[60vw] sm:h-[60vw] md:w-[70vh] md:h-[70vh] z-0">
           <SecurithumCore state="STABLE" />
         </div>
 
         {/* Questions Interface */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-10 px-6">
           {questions.map((q, i) => (
-            <div key={i} className={`q-block-${i} absolute flex flex-col items-center opacity-0`}>
-              <div className="font-mono text-[#00B8D4] mb-8">QUESTION {(i+1).toString().padStart(2, '0')} / 14</div>
-              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-center whitespace-pre-line leading-tight mb-12">
+            <div key={i} className={`q-block-${i} absolute flex flex-col items-center opacity-0 px-4`}>
+              <div className="font-mono text-[#00B8D4] mb-4 sm:mb-8 text-xs sm:text-base">QUESTION {(i+1).toString().padStart(2, '0')} / 14</div>
+              <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold tracking-tighter text-center whitespace-pre-line leading-tight mb-6 sm:mb-12">
                 {q.q}
               </h2>
-              <div className="flex gap-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                 {q.opts.map(opt => (
-                  <div key={opt} className="px-6 py-3 border border-[#8997A8]/30 rounded-full font-mono text-sm tracking-widest text-[#8997A8]">
+                  <div key={opt} className="px-3 sm:px-6 py-2 sm:py-3 border border-[#8997A8]/30 rounded-full font-mono text-xs tracking-widest text-[#8997A8]">
                     {opt}
                   </div>
                 ))}
@@ -99,13 +99,13 @@ export default function ConversationScene() {
           ))}
 
           {/* Rapid Numbers */}
-          <div className="rapid-numbers absolute opacity-0 font-mono text-9xl text-[#00B8D4] tracking-tighter">
+          <div className="rapid-numbers absolute opacity-0 font-mono text-7xl sm:text-9xl text-[#00B8D4] tracking-tighter">
             <span className="rapid-number">06</span>
           </div>
 
           {/* Transition Text */}
-          <h2 className="text-enough absolute text-6xl md:text-8xl font-bold tracking-tighter opacity-0">THAT&apos;S<br/>ENOUGH.</h2>
-          <h2 className="text-thinking absolute text-5xl md:text-7xl font-bold tracking-tighter opacity-0 text-center text-[#22D3EE]">THE PLATFORM<br/>DOES THE<br/>THINKING.</h2>
+          <h2 className="text-enough absolute text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter opacity-0 px-4 text-center">THAT&apos;S<br/>ENOUGH.</h2>
+          <h2 className="text-thinking absolute text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter opacity-0 text-center text-[#22D3EE] px-4">THE PLATFORM<br/>DOES THE<br/>THINKING.</h2>
         </div>
 
         {/* Generating Outputs */}
@@ -135,10 +135,10 @@ export default function ConversationScene() {
         </div>
 
         {/* Final 30 MIN text */}
-        <div className="text-final absolute flex flex-col items-center text-center opacity-0 z-30">
-          <h3 className="text-3xl md:text-5xl font-bold text-[#8997A8] mb-4">FROM SIGN-UP</h3>
-          <h3 className="text-3xl md:text-5xl font-bold mb-8">TO A COMPLIANCE PROGRAM.</h3>
-          <h1 className="text-8xl md:text-[12vw] font-bold tracking-tighter text-[#00B8D4] leading-none">
+        <div className="text-final absolute flex flex-col items-center text-center opacity-0 z-30 px-4">
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#8997A8] mb-2 sm:mb-4">FROM SIGN-UP</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-8">TO A COMPLIANCE PROGRAM.</h3>
+          <h1 className="text-6xl sm:text-8xl md:text-[12vw] font-bold tracking-tighter text-[#00B8D4] leading-none">
             30 MIN.
           </h1>
         </div>

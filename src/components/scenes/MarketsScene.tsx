@@ -57,7 +57,7 @@ export default function MarketsScene() {
         
         {/* Core converting to signal line */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <div className="scene-core w-[40vh] h-[40vh] opacity-30">
+          <div className="scene-core w-[40vw] h-[40vw] sm:w-[35vw] sm:h-[35vw] md:w-[35vh] md:h-[35vh] opacity-30">
             <SecurithumCore state="STABLE" />
           </div>
           <div className="signal-bridge absolute h-[2px] w-[50vw] bg-[#0E1825] opacity-0 overflow-hidden">
@@ -69,10 +69,10 @@ export default function MarketsScene() {
         <div className="absolute inset-0 flex items-center justify-between px-12 md:px-32 pointer-events-none z-10">
           {/* UK */}
           <div className="flex flex-col items-start w-1/3">
-            <h2 className="market-uk text-6xl md:text-8xl font-bold tracking-tighter opacity-0 mb-12">UK</h2>
-            <div className="flex flex-wrap gap-2">
+            <h2 className="market-uk text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter opacity-0 mb-4 sm:mb-12">UK</h2>
+            <div className="flex flex-wrap gap-1 sm:gap-2">
               {frameworks.uk_eu.map((fw, i) => (
-                <div key={i} className="fw-uk opacity-0 translate-y-4 px-4 py-2 border border-[#8997A8]/30 bg-[#0E1825]/50 rounded font-mono text-xs">
+                <div key={i} className="fw-uk opacity-0 translate-y-4 px-2 sm:px-4 py-1 sm:py-2 border border-[#8997A8]/30 bg-[#0E1825]/50 rounded font-mono text-[10px] sm:text-xs">
                   {fw}
                 </div>
               ))}
@@ -81,10 +81,10 @@ export default function MarketsScene() {
 
           {/* INDIA */}
           <div className="flex flex-col items-end w-1/3 text-right">
-            <h2 className="market-in text-6xl md:text-8xl font-bold tracking-tighter opacity-0 mb-12">INDIA</h2>
-            <div className="flex flex-wrap gap-2 justify-end">
+            <h2 className="market-in text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter opacity-0 mb-4 sm:mb-12">INDIA</h2>
+            <div className="flex flex-wrap gap-1 sm:gap-2 justify-end">
               {frameworks.india.map((fw, i) => (
-                <div key={i} className="fw-in opacity-0 translate-y-4 px-4 py-2 border border-[#8997A8]/30 bg-[#0E1825]/50 rounded font-mono text-xs text-[#34D399]">
+                <div key={i} className="fw-in opacity-0 translate-y-4 px-2 sm:px-4 py-1 sm:py-2 border border-[#8997A8]/30 bg-[#0E1825]/50 rounded font-mono text-[10px] sm:text-xs text-[#34D399]">
                   {fw}
                 </div>
               ))}
@@ -94,15 +94,15 @@ export default function MarketsScene() {
 
         {/* Typography */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-20 px-4">
-          <h2 className="text-global absolute text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center opacity-0 -translate-y-16">
+          <h2 className="text-global absolute text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-center opacity-0 -translate-y-16 px-4">
             GLOBAL<br/>STANDARDS.
           </h2>
-          <h2 className="text-local absolute text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-center opacity-0 translate-y-24 text-[#22D3EE]">
+          <h2 className="text-local absolute text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-center opacity-0 translate-y-24 text-[#22D3EE] px-4">
             LOCAL<br/>REGULATORY<br/>DEPTH.
           </h2>
-          
-          <h1 className="text-uk-in absolute text-[12vw] font-bold tracking-tighter opacity-0">
-            UK <span className="text-[#8997A8] font-light mx-4">↔</span> INDIA
+
+          <h1 className="text-uk-in absolute text-[14vw] sm:text-[12vw] font-bold tracking-tighter opacity-0 text-center px-4">
+            UK <span className="text-[#8997A8] font-light mx-2 sm:mx-4">↔</span> INDIA
           </h1>
         </div>
 

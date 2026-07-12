@@ -52,10 +52,10 @@ export default function ServicePillarsScene() {
         
         {/* Intro Text */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <h2 className="text-intro-1 absolute text-5xl md:text-8xl font-bold tracking-tighter text-center max-w-5xl opacity-0 px-4">
+          <h2 className="text-intro-1 absolute text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter text-center max-w-5xl opacity-0 px-4">
             SOME DECISIONS<br/>SHOULD <span className="text-[#FF4D4D]">NOT</span> BE<br/>AUTOMATED.
           </h2>
-          <h2 className="text-intro-2 absolute text-5xl md:text-8xl font-bold tracking-tighter text-center opacity-0 text-[#22D3EE]">
+          <h2 className="text-intro-2 absolute text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter text-center opacity-0 text-[#22D3EE] px-4">
             THAT&apos;S<br/>WHERE WE<br/>COME IN.
           </h2>
         </div>
@@ -66,10 +66,10 @@ export default function ServicePillarsScene() {
           <div className="horizontal-container flex w-[400vw] h-full">
             
             {servicePillars.map((pillar) => (
-              <div key={pillar.id} className="w-[100vw] h-full flex flex-col justify-center px-12 md:px-24 lg:px-48 border-r border-[#09111C]">
-                <div className="font-mono text-[#00B8D4] mb-4 text-xl">PILLAR {pillar.id}</div>
-                <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-8">{pillar.name}</h2>
-                <p className="text-2xl text-[#8997A8] max-w-3xl mb-16 leading-relaxed">
+              <div key={pillar.id} className="w-[100vw] h-full flex flex-col justify-center px-8 sm:px-16 md:px-24 lg:px-48 border-r border-[#09111C]">
+                <div className="font-mono text-[#00B8D4] mb-3 sm:mb-4 text-sm sm:text-xl">PILLAR {pillar.id}</div>
+                <h2 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-none mb-4 sm:mb-8">{pillar.name}</h2>
+                <p className="text-lg sm:text-2xl text-[#8997A8] max-w-3xl mb-8 sm:mb-16 leading-relaxed">
                   {pillar.description}
                 </p>
                 

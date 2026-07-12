@@ -78,7 +78,7 @@ export default function FrameworkGraphScene() {
       <section ref={sceneRef} className="w-full h-screen relative bg-[#05080D] text-[#F2F5F7] overflow-hidden flex items-center justify-center">
         
         {/* Core Background */}
-        <div className="scene-core absolute w-[80vh] h-[80vh] opacity-0 scale-50 z-0">
+        <div className="scene-core absolute w-[70vw] h-[70vw] sm:w-[60vw] sm:h-[60vw] md:w-[70vh] md:h-[70vh] opacity-0 scale-50 z-0">
           <SecurithumCore state="FRAMEWORK_GRAPH" />
         </div>
 
@@ -91,14 +91,15 @@ export default function FrameworkGraphScene() {
 
         {/* Orbital Frameworks */}
         <svg className="absolute inset-0 w-full h-full z-10 pointer-events-none">
-          <g transform="translate(50vw, 50vh)">
+          <g transform="translate(50%, 50%)">
             {frameworkNames.map((name, i) => {
               const angle = (i * (360 / frameworkNames.length)) * (Math.PI / 180);
-              const r = 250;
+              // Use a responsive radius via CSS custom property not possible in SVG, so cap at 40vmin
+              const r = 200;
               const x = (r * Math.cos(angle)).toFixed(2);
               const y = (r * Math.sin(angle)).toFixed(2);
               return (
-                <line 
+                <line
                   key={`line-${i}`}
                   x1="0" y1="0" x2={x} y2={y}
                   stroke="#8997A8"
@@ -116,12 +117,11 @@ export default function FrameworkGraphScene() {
         <div className="absolute inset-0 z-20 pointer-events-none">
           {frameworkNames.map((name, i) => {
             const angle = (i * (360 / frameworkNames.length)) * (Math.PI / 180);
-            const r = 250;
-            // Calculate absolute position based on center
+            const r = 200;
             return (
-              <div 
+              <div
                 key={`node-${i}`}
-                className="fw-node absolute font-mono text-[10px] sm:text-xs px-3 py-1 border border-[#8997A8] rounded-full text-[#8997A8] opacity-0 scale-0 bg-[#05080D]"
+                className="fw-node absolute font-mono text-[9px] sm:text-[10px] md:text-xs px-2 sm:px-3 py-0.5 sm:py-1 border border-[#8997A8] rounded-full text-[#8997A8] opacity-0 scale-0 bg-[#05080D]"
                 style={{
                   top: `calc(50% + ${(r * Math.sin(angle)).toFixed(2)}px)`,
                   left: `calc(50% + ${(r * Math.cos(angle)).toFixed(2)}px)`,
@@ -142,26 +142,26 @@ export default function FrameworkGraphScene() {
 
         {/* Typography */}
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none z-30 px-4">
-          <h2 className="text-68 absolute text-7xl md:text-9xl font-bold tracking-tighter opacity-0 translate-y-8 text-center text-[#F2F5F7]">
+          <h2 className="text-68 absolute text-6xl sm:text-7xl md:text-9xl font-bold tracking-tighter opacity-0 translate-y-8 text-center text-[#F2F5F7] px-4">
             68<br/>FRAMEWORKS.
           </h2>
-          <h2 className="text-one absolute text-6xl md:text-8xl font-bold tracking-tighter opacity-0 translate-y-8 mt-48 text-center text-[#22D3EE]">
+          <h2 className="text-one absolute text-5xl sm:text-6xl md:text-8xl font-bold tracking-tighter opacity-0 translate-y-8 mt-32 sm:mt-48 text-center text-[#22D3EE] px-4">
             ONE<br/>CONTROL<br/>GRAPH.
           </h2>
-          
-          <h2 className="text-test absolute text-7xl md:text-9xl font-bold tracking-tighter opacity-0 text-center">
+
+          <h2 className="text-test absolute text-6xl sm:text-7xl md:text-9xl font-bold tracking-tighter opacity-0 text-center px-4">
             TEST<br/>ONCE.
           </h2>
-          
-          <h2 className="text-satisfy absolute text-7xl md:text-9xl font-bold tracking-tighter opacity-0 text-center text-[#34D399]">
+
+          <h2 className="text-satisfy absolute text-6xl sm:text-7xl md:text-9xl font-bold tracking-tighter opacity-0 text-center text-[#34D399] px-4">
             SATISFY<br/>MANY.
           </h2>
 
-          <div className="text-no-dup absolute flex flex-col items-center opacity-0">
-            <h2 className="text-6xl md:text-9xl font-bold tracking-tighter text-center">
+          <div className="text-no-dup absolute flex flex-col items-center opacity-0 px-4">
+            <h2 className="text-5xl sm:text-6xl md:text-9xl font-bold tracking-tighter text-center">
               NO<br/>DUPLICATE<br/>WORK.
             </h2>
-            <h1 className="text-ever text-[15vw] font-bold tracking-tighter text-[#00B8D4] mt-8 opacity-0">
+            <h1 className="text-ever text-[15vw] font-bold tracking-tighter text-[#00B8D4] mt-4 sm:mt-8 opacity-0">
               EVER.
             </h1>
           </div>

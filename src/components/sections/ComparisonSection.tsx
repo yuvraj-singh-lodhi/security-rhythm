@@ -35,10 +35,10 @@ export default function ComparisonSection() {
         </p>
       </div>
 
-      <div className="relative w-[800px] h-[800px] flex items-center justify-center">
+      <div className="relative w-[min(90vw,800px)] h-[min(90vw,800px)] flex items-center justify-center">
         {/* Center Node: Securithum */}
         <motion.div 
-          className="absolute z-20 w-48 h-48 rounded-full bg-surface border border-primary flex items-center justify-center flex-col text-center"
+          className="absolute z-20 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-surface border border-primary flex items-center justify-center flex-col text-center"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           viewport={{ once: true }}
@@ -50,12 +50,12 @@ export default function ComparisonSection() {
         </motion.div>
 
         {/* Orbit Path */}
-        <div className="absolute w-[600px] h-[600px] border border-border rounded-full border-dashed" />
+        <div className="absolute w-[min(75vw,600px)] h-[min(75vw,600px)] border border-border rounded-full border-dashed" />
         
         {/* Rotating Wheel */}
         <motion.div 
           style={{ rotate }}
-          className="absolute w-[600px] h-[600px] rounded-full"
+          className="absolute w-[min(75vw,600px)] h-[min(75vw,600px)] rounded-full"
         >
           {competitors.map((comp, i) => {
             const angle = (i / competitors.length) * 360;
@@ -66,7 +66,7 @@ export default function ComparisonSection() {
                 style={{
                   top: '50%',
                   left: '50%',
-                  transform: `rotate(${angle}deg) translate(300px) rotate(-${angle}deg)`,
+                  transform: `rotate(${angle}deg) translate(min(37.5vw,300px)) rotate(-${angle}deg)`,
                 }}
               >
                 {/* Counter-rotate the individual nodes so text stays upright */}

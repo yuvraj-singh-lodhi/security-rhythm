@@ -51,30 +51,30 @@ export default function FinalRhythmScene() {
       
       {/* The Core (Complete) */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-        <div className="core-final w-[90vh] h-[90vh] opacity-0 scale-50">
+        <div className="core-final w-[75vw] h-[75vw] sm:w-[60vw] sm:h-[60vw] md:w-[80vh] md:h-[80vh] opacity-0 scale-50">
           <SecurithumCore state="COMPLETE" />
         </div>
       </div>
 
       {/* Story Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none z-10">
-        <h2 className="text-product absolute text-5xl md:text-8xl font-bold tracking-tighter opacity-0">
+        <h2 className="text-product absolute text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter opacity-0 text-center px-4">
           SECURITY<br/>IS NOT<br/>A PRODUCT<br/>YOU BUY.
         </h2>
-        <h2 className="text-build absolute text-5xl md:text-8xl font-bold tracking-tighter opacity-0 text-[#22D3EE]">
+        <h2 className="text-build absolute text-4xl sm:text-5xl md:text-8xl font-bold tracking-tighter opacity-0 text-[#22D3EE] text-center px-4">
           IT IS A<br/>PROGRAMME<br/>YOU BUILD.
         </h2>
-        <h2 className="text-sustain absolute text-6xl md:text-9xl font-bold tracking-tighter opacity-0 text-[#34D399]">
+        <h2 className="text-sustain absolute text-5xl sm:text-6xl md:text-9xl font-bold tracking-tighter opacity-0 text-[#34D399] text-center px-4">
           AND<br/>SUSTAIN.
         </h2>
       </div>
 
       {/* Final Closing UI */}
       <div className="final-closing absolute inset-0 flex flex-col items-center justify-center z-20 px-6 opacity-0">
-        <h1 className="text-4xl md:text-6xl font-bold tracking-widest text-[#00B8D4] mb-2 uppercase">SECURITHUM</h1>
-        <h2 className="text-2xl md:text-4xl font-light tracking-widest text-[#F2F5F7] mb-16 uppercase">SECURITY IN RHYTHM.</h2>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-widest text-[#00B8D4] mb-1 sm:mb-2 uppercase">SECURITHUM</h1>
+        <h2 className="text-xl sm:text-2xl md:text-4xl font-light tracking-widest text-[#F2F5F7] mb-8 sm:mb-16 uppercase">SECURITY IN RHYTHM.</h2>
 
-        <div className="flex flex-col sm:flex-row gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 mb-8 sm:mb-16 w-full sm:w-auto px-6 sm:px-0">
           <button className="px-8 py-4 bg-[#00B8D4] text-[#05080D] font-mono text-sm tracking-widest uppercase hover:bg-[#22D3EE] transition-colors border border-transparent">
             Assess Your Security
           </button>

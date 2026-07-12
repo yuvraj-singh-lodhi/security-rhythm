@@ -58,24 +58,24 @@ export default function RegulatoryClockScene() {
       <section ref={sceneRef} className="w-full h-screen relative bg-[#05080D] text-[#F2F5F7] overflow-hidden flex items-center justify-center">
         
         {/* The Core Background */}
-        <div className="scene-core absolute w-[80vh] h-[80vh] opacity-0 scale-50 z-0">
+        <div className="scene-core absolute w-[70vw] h-[70vw] sm:w-[60vw] sm:h-[60vw] md:w-[70vh] md:h-[70vh] opacity-0 scale-50 z-0">
           <SecurithumCore state="INCIDENT" />
         </div>
 
         {/* Timers */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-12 z-10 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 sm:gap-12 z-10 pointer-events-none">
           <div className="timer-gdpr flex flex-col items-center opacity-0">
-            <h2 className="text-7xl md:text-9xl font-mono font-bold tracking-tighter text-[#FF4D4D]"><span className="num">72</span>:00:00</h2>
-            <div className="text-xl md:text-2xl font-bold tracking-widest text-[#8997A8] mt-2">GDPR</div>
+            <h2 className="text-5xl sm:text-7xl md:text-9xl font-mono font-bold tracking-tighter text-[#FF4D4D]"><span className="num">72</span>:00:00</h2>
+            <div className="text-base sm:text-xl md:text-2xl font-bold tracking-widest text-[#8997A8] mt-1 sm:mt-2">GDPR</div>
           </div>
           <div className="timer-certin flex flex-col items-center opacity-0">
-            <h2 className="text-7xl md:text-9xl font-mono font-bold tracking-tighter text-[#F5A623]">0<span className="num">6</span>:00:00</h2>
-            <div className="text-xl md:text-2xl font-bold tracking-widest text-[#8997A8] mt-2">CERT-IN</div>
+            <h2 className="text-5xl sm:text-7xl md:text-9xl font-mono font-bold tracking-tighter text-[#F5A623]">0<span className="num">6</span>:00:00</h2>
+            <div className="text-base sm:text-xl md:text-2xl font-bold tracking-widest text-[#8997A8] mt-1 sm:mt-2">CERT-IN</div>
           </div>
         </div>
 
         {/* First Text */}
-        <h2 className="text-clock absolute text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-center max-w-5xl opacity-0 z-20 px-4">
+        <h2 className="text-clock absolute text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-center max-w-5xl opacity-0 z-20 px-4">
           WHEN SOMETHING<br/>GOES WRONG,<br/><span className="text-[#FF4D4D]">THE CLOCK<br/>DOESN&apos;T WAIT.</span>
         </h2>
 
@@ -87,16 +87,16 @@ export default function RegulatoryClockScene() {
         </div>
 
         {/* Playbook Actions */}
-        <div className="action-list absolute left-8 md:left-24 top-1/2 -translate-y-1/2 flex flex-col gap-4 font-mono text-sm tracking-widest z-20">
-          <div className="action-item flex items-center gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> PLAYBOOK STARTED</div>
-          <div className="action-item flex items-center gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> OWNER ASSIGNED</div>
-          <div className="action-item flex items-center gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> LEGAL REVIEW</div>
-          <div className="action-item flex items-center gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> REGULATORY IMPACT CHECK</div>
-          <div className="action-item flex items-center gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> NOTIFICATION DEADLINE TRACKED</div>
+        <div className="action-list absolute left-4 sm:left-8 md:left-24 top-1/2 -translate-y-1/2 flex flex-col gap-2 sm:gap-4 font-mono text-xs sm:text-sm tracking-widest z-20">
+          <div className="action-item flex items-center gap-2 sm:gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> PLAYBOOK STARTED</div>
+          <div className="action-item flex items-center gap-2 sm:gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> OWNER ASSIGNED</div>
+          <div className="action-item hidden sm:flex items-center gap-2 sm:gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> LEGAL REVIEW</div>
+          <div className="action-item hidden sm:flex items-center gap-2 sm:gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> REGULATORY IMPACT CHECK</div>
+          <div className="action-item hidden sm:flex items-center gap-2 sm:gap-3 opacity-0 -translate-x-12"><span className="text-[#34D399]">✓</span> NOTIFICATION DEADLINE TRACKED</div>
         </div>
 
         {/* Closing Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center font-bold tracking-tighter text-5xl md:text-8xl leading-tight z-30 pointer-events-none">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center font-bold tracking-tighter text-3xl sm:text-5xl md:text-8xl leading-tight z-30 pointer-events-none px-4">
           <h2 className="text-know-1 opacity-0">KNOW WHAT HAPPENED.</h2>
           <h2 className="text-know-2 opacity-0 text-[#8997A8]">KNOW WHO OWNS IT.</h2>
           <h2 className="text-know-3 opacity-0 text-[#22D3EE]">KNOW WHAT HAPPENS NEXT.</h2>
